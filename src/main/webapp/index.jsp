@@ -20,18 +20,18 @@
 			<table>
 				<tr>
 					<td><input type="text" id="ra_aluno" name="ra_aluno"
-						placeholder="RA" required="required" 
+						placeholder="RA"
 						value='<c:out value="${aluno.ra_aluno }"></c:out>'></td>
+											<td><input type="submit" id="botao" name="botao"
+						value="Buscar" /></td>
 				</tr>
 				<tr>
 					<td><input type="text" id="cpf" name="cpf" placeholder="CPF"
-						required="required" value='<c:out value="${aluno.cpf }"></c:out>'>
-					</td>
+						value='<c:out value="${aluno.cpf }"></c:out>'></td>
 				</tr>
 				<tr>
 					<td><input type="text" id="nome" name="nome"
-						placeholder="Nome" required="required"
-						value='<c:out value="${aluno.nome }"></c:out>'>
+						placeholder="Nome" value='<c:out value="${aluno.nome }"></c:out>'>
 				</tr>
 
 				<tr>
@@ -42,75 +42,69 @@
 
 				<tr>
 					<td><input type="text" id="data_nasc" name="data_nasc"
-						placeholder="Data Nascimento" required="required"
+						placeholder="Data Nascimento"
 						value='<c:out value="${aluno.data_nasc }"></c:out>'></td>
 				</tr>
 
 				<tr>
 					<td><input type="number" id="telefone1" name="telefone1"
-						placeholder="Telefone 1" required="required"
+						placeholder="Telefone 1"
 						value='<c:out value="${aluno.telefone1 }"></c:out>'></td>
 					<td><input type="number" id="telefone2" name="telefone2"
-						placeholder="Telefone 2" required="required"
+						placeholder="Telefone 2"
 						value='<c:out value="${aluno.telefone2 }"></c:out>'></td>
 				</tr>
 
 				<tr>
 					<td><input type="text" id="email_p" name="email_p"
-						placeholder="Email Pessoal" required="required"
+						placeholder="Email Pessoal"
 						value='<c:out value="${aluno.email_p}"></c:out>'></td>
-				</tr>
-
-				<tr>
 					<td><input type="text" id="email_c" name="email_c"
-						placeholder="Email Corporativo" required="required"
-						value='<c:out value="${aluno.email_c}"></c:out>'>
+						placeholder="Email Corporativo"
+						value='<c:out value="${aluno.email_c}"></c:out>'></td>
 				</tr>
 
 				<tr>
-					<td><input type="text" id="inst_seg_grau" name="inst_seg_grau"
-						placeholder="Escola Segundo Grau" required="required"
-						value='<c:out value="${aluno.inst_seg_grau}"></c:out>'></td>
+					<td><input type="text" id="ints_seg_grau" name="ints_seg_grau"
+						placeholder="Escola Segundo Grau"
+						value='<c:out value="${aluno.ints_seg_grau}"></c:out>'></td>
 				</tr>
 
 				<tr>
 					<td><input type="text" id="data_seg_grau" name="data_seg_grau"
-						placeholder="Data Segundo Grau Formação" required="required"
+						placeholder="Data Segundo Grau Formação"
 						value='<c:out value="${aluno.data_seg_grau}"></c:out>'></td>
 				</tr>
 
 				<tr>
-					<td><input type="number" id="pontu_vesti" name="pontu_vesti"
-						placeholder="Pontuação vestibular" required="required"
+					<td><input type="text" id="pontu_vesti" name="pontu_vesti"
+						placeholder="Pontuação vestibular"
 						value='<c:out value="${aluno.pontu_vesti }"></c:out>'></td>
 				</tr>
 
 				<tr>
 					<td><input type="number" id="ano_ingre" name="ano_ingre"
-						placeholder="Ano de ingresso" required="required"
+						placeholder="Ano de ingresso"
 						value='<c:out value="${aluno.ano_ingre}"></c:out>'></td>
+					<td><input type="number" id="semestre_ingre"
+						name="semestre_ingre" placeholder="Semestre ingresso"
+						value='<c:out value="${aluno.semestre_ingre }"></c:out>'>
+					</td>
 				</tr>
 
-				<tr>
-					<td><input type="number" id="semestre_ingre"
-						name="semestre_ingre" min="1" max="2"
-						placeholder="Semestre de ingresso do ano" required="required"
-						value='<c:out value="${aluno.semestre_ingre}"></c:out>'></td>
-				</tr>
+
 
 				<tr>
 					<td><input type="number" id="ano_grad_limite"
-						name="ano_grad_limite" placeholder="Ano graduação limite" 
+						name="ano_grad_limite" placeholder="Ano graduação limite"
 						value='<c:out value="${aluno.ano_grad_limite }"></c:out>'>
 					</td>
-				</tr>
-
-				<tr>
-					<td><input type="number" id="semestre_limite"
-						name="semestre_limite" placeholder="Semestre limite" 
+						<td><input type="number" id="semestre_limite"
+						name="semestre_limite" placeholder="Semestre Limite"
 						value='<c:out value="${aluno.semestre_limite }"></c:out>'>
 					</td>
 				</tr>
+
 
 				<tr>
 					<td><input type="number" id="cod_curso" name="cod_curso"
@@ -159,13 +153,13 @@
 	<div align="center">
 
 		<c:if test="${not empty alunos }">
-			<table class="table_round">
+			<table id="tableListar"">
 				<thead>
 					<tr>
 						<th>RA</th>
 						<th>CPF</th>
 						<th>Nome</th>
-						<th>Nome Social</th>
+						<th>Nascimento</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -175,6 +169,7 @@
 							<td><c:out value="${a.ra_aluno}" /></td>
 							<td><c:out value="${a.cpf}" /></td>
 							<td><c:out value="${a.nome}" /></td>
+							<td><c:out value="${a.data_nasc}" /></td>
 						</tr>
 					</c:forEach>
 				</tbody>

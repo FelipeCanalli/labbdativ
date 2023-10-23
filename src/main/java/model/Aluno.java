@@ -11,7 +11,7 @@ public class Aluno {
 	private String email_p;
 	private String email_c;
 	private String data_seg_grau;
-	private String inst_seg_grau;
+	private String ints_seg_grau;
 	private String pontu_vesti;
 	private String ano_ingre;
 	private String semestre_ingre;
@@ -121,13 +121,13 @@ public class Aluno {
 	}
 
 
-	public String getInst_seg_grau() {
-		return inst_seg_grau;
+	public String getInts_seg_grau() {
+		return ints_seg_grau;
 	}
 
 
-	public void setInst_seg_grau(String inst_seg_grau) {
-		this.inst_seg_grau = inst_seg_grau;
+	public void setInts_seg_grau(String ints_seg_grau) {
+		this.ints_seg_grau = ints_seg_grau;
 	}
 
 
@@ -205,8 +205,8 @@ public class Aluno {
 	public String toString() {
 		return "Aluno [ra_aluno=" + ra_aluno + ", cpf=" + cpf + ", nome=" + nome + ", nome_social=" + nome_social
 				+ ", data_nasc=" + data_nasc + ", telefone1=" + telefone1 + ", telefone2=" + telefone2 + ", email_p="
-				+ email_p + ", email_c=" + email_c + ", data_seg_grau=" + data_seg_grau + ", inst_seg_grau="
-				+ inst_seg_grau + ", pontu_vesti=" + pontu_vesti + ", ano_ingre=" + ano_ingre + ", semestre_ingre="
+				+ email_p + ", email_c=" + email_c + ", data_seg_grau=" + data_seg_grau + ", ints_seg_grau="
+				+ ints_seg_grau + ", pontu_vesti=" + pontu_vesti + ", ano_ingre=" + ano_ingre + ", semestre_ingre="
 				+ semestre_ingre + ", semestre_limite=" + semestre_limite + ", ano_grad_limite=" + ano_grad_limite
 				+ ", cod_curso=" + cod_curso + ", turno_curso=" + turno_curso + "]";
 	}

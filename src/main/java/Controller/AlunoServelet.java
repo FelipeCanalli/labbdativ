@@ -26,7 +26,7 @@ public class AlunoServelet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-			rd.forward(request, response);
+		rd.forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -43,7 +43,7 @@ public class AlunoServelet extends HttpServlet {
 		String email_c = request.getParameter("email_c");
 		String data_nasc = request.getParameter("data_nasc");
 		String data_seg_grau = request.getParameter("data_seg_grau");
-		String inst_seg_grau = request.getParameter("ints_seg_grau");
+		String ints_seg_grau = request.getParameter("ints_seg_grau");
 		String pontu_vesti = request.getParameter("pontu_vesti");
 		String ano_ingre = request.getParameter("ano_ingre");
 		String semestre_ingre = request.getParameter("semestre_ingre");
@@ -72,7 +72,7 @@ public class AlunoServelet extends HttpServlet {
 			a.setEmail_c(email_c);
 			a.setData_nasc(data_nasc);
 			a.setData_seg_grau(data_seg_grau);
-			a.setInst_seg_grau(inst_seg_grau);
+			a.setInts_seg_grau(ints_seg_grau);
 			a.setPontu_vesti(pontu_vesti);
 			a.setAno_ingre(ano_ingre);
 			a.setSemestre_ingre(semestre_ingre);
@@ -111,6 +111,8 @@ public class AlunoServelet extends HttpServlet {
 
 		} catch (SQLException | ClassNotFoundException e) {
 			erro = e.getMessage();
+			System.out.println(e);
+			e.printStackTrace();
 		} finally {
 
 			request.setAttribute("saida", saida);

@@ -4,11 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class GenericDao {
+public class TesteConnection {
 
-	private Connection c;
-
-	public Connection getConnection() throws ClassNotFoundException, SQLException {
+	public static void main(String[] args) {
+		Connection c;
 		String hostName = "localhost";
 		String dbName = "lbd_av1";
 		String user = "felipe";
@@ -26,12 +25,6 @@ public class GenericDao {
 		} catch (SQLException e) {
 			System.err.println("Erro ao conectar ao banco de dados: " + e.getMessage());
 		}
-		return c;
 	}
+
 }
-
-
-
-
-
-
